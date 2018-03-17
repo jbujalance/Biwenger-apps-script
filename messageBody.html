@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <base target="_top">
+  </head>
+  
+  <body>
+    <h1>Jornada <?= data.round ?></h1>
+    <table>
+      <tr>
+        <th>Posición</th>
+        <th>Nombre</th>
+        <th>Puntos</th>
+        <th>Prima (€)</th>
+        <th>Paga (€)</th>
+      </tr>
+      <? for (var i = 0; i < data.players.length; i++) { ?>
+        <tr>
+          <td><?= data.players[i].position ?></td>
+          <td><?= data.players[i].name ?></td>
+          <td><?= data.players[i].points ?></td>
+          <td><?= data.players[i].realbonus ?></td>
+          <td><?= data.players[i].paga ?></td>
+        </tr>
+      <? } ?>
+    </table>
+  </body>
+</html>
